@@ -1,0 +1,130 @@
+@import "@/index.scss";
+
+%projectItemHoverProperties {
+    background: $projectEditMainLinearGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image-slice: 1;
+    border-image-source: $projectEditBorderImageLinearGradient;
+}
+
+.project-edit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 5%;
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        &__heading {
+            margin-bottom: 40px;
+            font-family: "Medio", sans-serif;
+            font-size: 88px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 106px;
+            letter-spacing: -0.011em;
+            text-align: left;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 35px;
+            background: #fbfbfb;
+            box-shadow: 0 4px 41px rgba(0, 0, 0, 0.09);
+            font-family: "SulphurPoint", sans-serif;
+            font-size: 48px;
+            line-height: 48px;
+            color: black;
+            cursor: pointer;
+
+            &__btn {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: 100%;
+                font-size: 24px;
+                color: gray;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+
+                &-draft {
+                    border: 1px solid gray;
+                    width: 56px;
+                    height: 56px;
+                    margin-left: 20px;
+
+                    &:after {
+                        content: "...";
+                        position: relative;
+                        bottom: -7px;
+                        left: 1px;
+                    }
+                }
+            }
+
+            &:hover {
+                @extend %projectItemHoverProperties;
+
+                .project-edit__navigation__item__btn-draft {
+                    @extend %projectItemHoverProperties;
+
+                    border-bottom: 1px solid;
+
+                    &:after {
+                        @extend %projectItemHoverProperties;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 45.83px;
+                    height: 32.07px;
+                }
+            }
+        }
+
+        &__dashboard,
+        &__open {
+            background-color: black;
+            color: white;
+        }
+
+        &__dashboard {
+            cursor: pointer;
+        }
+
+        &__open,
+        &__test {
+            cursor: not-allowed;
+        }
+    }
+
+    &__content {
+        margin: 0 0 0 auto;
+        width: 45%;
+        height: 680px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%),
+            linear-gradient(0deg, #dad9d9, #dad9d9);
+
+        .website {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: unset;
+            margin-top: unset;
+        }
+    }
+}

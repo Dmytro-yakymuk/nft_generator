@@ -1,0 +1,28 @@
+// Позначка рівня рідкісності варіанта (генератор і сторінка згенерованої колекції).
+.rarity {
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+
+    &--common {
+        background: #8a8a8a;
+    }
+
+    &--uncommon {
+        background: #2e9d57;
+    }
+
+    &--rare {
+        background: #2f6fd6;
+    }
+
+    &--epic {
+        background: #8a3fd1;
+    }
+
+    &--legendary {
+        background: #e08a00;
+    }
+}

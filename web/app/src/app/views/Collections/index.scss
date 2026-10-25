@@ -1,0 +1,107 @@
+@import "@/index.scss";
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 308px);
+    max-width: 1920px;
+    width: 58%;
+    grid-gap: 88px;
+    margin: 15vh auto 5vh;
+    align-items: center;
+    justify-items: center;
+
+    &__create {
+        position: fixed;
+        bottom: 100px;
+        right: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 272px;
+        height: 48px;
+        font-family: "SulphurPoint", sans-serif;
+        font-size: 18px;
+        color: white;
+        background: black;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.create-project__form {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: "SulphurPoint", sans-serif;
+
+    &__name,
+    &__submit,
+    &__nft {
+        width: 100%;
+        height: 56px;
+        margin-top: 10px;
+        padding-left: 20px;
+        border: 1px solid $createProjectMainBorderColor;
+        font-family: "SulphurPoint", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        color: black;
+        outline: none;
+        cursor: pointer;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    &__warning {
+        margin-top: 14px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        color: #000;
+    }
+
+    &__name-label,
+    &__nft-label {
+        color: black;
+    }
+
+    &__submit {
+        margin-top: 50px;
+        background-color: black;
+        font-size: 18px;
+        color: white;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    .projects {
+        grid-template-columns: repeat(3, 308px);
+        width: 70%;
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (max-width: $desktopBreakPoint) {
+
+    .projects {
+        grid-template-columns: repeat(3, 250px);
+        width: 81%;
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (max-width: $tabletBreakPoint) {
+
+    .projects {
+        grid-template-columns: repeat(3, 200px);
+        width: 84%;
+        grid-gap: 20px;
+    }
+}

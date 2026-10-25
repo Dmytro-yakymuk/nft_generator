@@ -1,0 +1,269 @@
+@import "@/index.scss";
+
+.dashboard__chart {
+    position: relative;
+    width: 100%;
+    height: 422px;
+    margin: 20px 0 10px auto;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90.25deg, #e9e9e9 0%, #e8e8e8 100%);
+    background: linear-gradient(180deg, #fafafc 0%, #fff 100%);
+    font-family: "SulphurPoint", sans-serif;
+    font-style: normal;
+
+    &__empty {
+        display: block;
+        margin-top: 140px;
+        text-align: center;
+        font-size: 18px;
+        color: #9b9b9b;
+    }
+
+    .svg-loading {
+        position: absolute;
+        margin: auto;
+        z-index: 5;
+        background: linear-gradient(180deg, #fafafc 0%, #fff 100%);
+        opacity: 0.6;
+    }
+
+    #mask {
+        animation: mask 975ms ease infinite;
+    }
+
+    @keyframes mask {
+        from { transform: translateX(0); }
+        to { transform: translateX(280px); }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__label {
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        font-size: 24px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    .inactive {
+        background: #000;
+    }
+
+    .active {
+        background: linear-gradient(180deg, #fafafc 0%, #fff 100%);
+        border: 1px solid;
+        border-image-source: linear-gradient(90.25deg, #e9e9e9 0%, #e8e8e8 100%);
+        border-image-slice: 1;
+
+        img {
+            background: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+        }
+    }
+
+    &__calendar {
+        position: absolute;
+        right: 25%;
+        top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        cursor: pointer;
+        font-family: "SulphurPoint", sans-serif;
+        font-style: normal;
+
+        &__icon {
+            z-index: 2;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        &__btnhidden {
+            display: none;
+        }
+
+        &__btn {
+            position: absolute;
+            z-index: 4;
+            top: 405px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+
+            .choosen-days {
+                margin-right: 135px;
+                white-space: nowrap;
+                font-family: "Roboto", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                color: #000;
+            }
+
+            button {
+                padding: 10px;
+                font-family: "Roboto", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .cancel-btn {
+                margin-right: 10px;
+                border: 1px solid #000;
+                box-sizing: border-box;
+                background-color: #fff;
+                color: #000;
+            }
+
+            .continue-btn {
+                border: none;
+                background-color: #000;
+                color: #fff;
+            }
+        }
+
+        .rdrCalendarWrapper {
+            position: absolute;
+            top: 120%;
+            right: 0;
+            z-index: 3;
+            max-width: unset;
+            background: linear-gradient(116.82deg, #eff3fb 0%, #fff8f8 100%);
+            font-family: "SulphurPoint", sans-serif;
+            font-style: normal;
+
+            .rdrMonth {
+                padding: 0 0.833em 80px 0.833em;
+            }
+
+            .rdrDay {
+                background: #fcfcfc;
+                border: 1px solid #dfdfdf;
+            }
+
+            .rdrInRange + span {
+
+                span {
+                    color: #000;
+                }
+            }
+
+            .rdrDayActive {
+
+                .rdrDayNumber {
+
+                    span {
+                        font-family: "Roboto", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #000;
+                    }
+                }
+            }
+
+            .rdrInRange {
+                border-top-left-radius: unset;
+                border-bottom-left-radius: unset;
+                border-top-right-radius: unset;
+                border-bottom-right-radius: unset;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: #cddeff;
+            }
+
+            .rdrEndEdge,
+            .rdrDayWeekend,
+            .rdrDayEndOfWeek,
+            .rdrStartEdge {
+                border-top-right-radius: unset;
+                border-bottom-right-radius: unset;
+                right: 0;
+                left: 0;
+                top: 0;
+            }
+
+            .rdrStartEdge,
+            .rdrEndEdge {
+                border-top-left-radius: unset;
+                border-bottom-left-radius: unset;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+            }
+
+            .rdrDayHovored {
+                border-top-left-radius: unset;
+                border-bottom-left-radius: unset;
+                border-top-right-radius: unset;
+                border-bottom-right-radius: unset;
+                right: 0;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    .chart-filters {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        width: 162px;
+        height: 46px;
+        cursor: pointer;
+        font-family: "SulphurPoint", sans-serif;
+        font-style: normal;
+    }
+
+    #chart {
+        z-index: 3;
+        width: 95%;
+        height: 340px;
+        margin: auto;
+    }
+
+    .recharts-responsive-container {
+        height: 340px;
+        padding: 80px 20px 20px;
+    }
+}
+
+@media screen and (max-width: $desktopBreakPoint + 200px) {
+
+    .dashboard__chart {
+
+        &__calendar {
+            right: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: $tabletBreakPoint + 100px) {
+
+    .dashboard__chart {
+
+        &__calendar {
+            right: 40%;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+# Платформа однією командою: `make up` (або `docker compose up -d --build`): застосунок, PostgreSQL і вузол IPFS.
+# Профілі: tunnel - публічна адреса через ngrok, quick-tunnel - тимчасова адреса без реєстрації (Cloudflare, srv.us або localhost.run),
+# chain - локальний блокчейн Anvil.
+name: generator
+
+services:
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: generator
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d generator"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    image: generator-app:local
+    depends_on:
+      db:
+        condition: service_healthy
+      ipfs:
+        condition: service_started
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD:-postgres}@db:5432/generator?sslmode=disable
+      TOKEN_SECRET: ${TOKEN_SECRET:-local-development-secret}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:9012}
+      CHAIN_ID: ${CHAIN_ID:-}
+      CHAIN_NAME: ${CHAIN_NAME:-}
+      CHAIN_RPC_URL: ${CHAIN_RPC_URL:-}
+      CHAIN_EXPLORER_URL: ${CHAIN_EXPLORER_URL:-}
+      COLLECTION_NAME: ${COLLECTION_NAME:-}
+      COLLECTION_DESCRIPTION: ${COLLECTION_DESCRIPTION:-}
+      # Скільки зображень генерується одночасно; 0 - за кількістю ядер процесора.
+      GENERATION_WORKERS: ${GENERATION_WORKERS:-0}
+      # Стиснення PNG згенерованих зображень: default, best-speed (у кілька разів швидше, файли ~на третину більші),
+      # best-compression, none.
+      GENERATION_PNG_COMPRESSION: ${GENERATION_PNG_COMPRESSION:-default}
+      # Вузол, з якого сервер читає події контрактів для дашборду: усередині Docker
+      # localhost - це сам контейнер, тому для Anvil за замовчуванням - сервіс anvil.
+      CHAIN_SERVER_RPC_URL: ${CHAIN_SERVER_RPC_URL:-${CHAIN_RPC_URL:-http://anvil:8545}}
+      CHAIN_LOGS_BLOCK_RANGE: ${CHAIN_LOGS_BLOCK_RANGE:-}
+      S3_GATEWAY: ${S3_GATEWAY:-}
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY:-}
+      S3_SECRET_KEY: ${S3_SECRET_KEY:-}
+      S3_BUCKET: ${S3_BUCKET:-}
+      # Публікація колекцій в IPFS: RPC API вузла і HTTP-шлюз, через який браузер відкриває файли.
+      IPFS_API_URL: ${IPFS_API_URL:-http://ipfs:5001}
+      IPFS_GATEWAY_URL: ${IPFS_GATEWAY_URL:-http://localhost:${IPFS_GATEWAY_PORT:-8080}}
+      # Опубліковані мінт-сайти також на піддоменах <адреса>.<домен>; *.localhost браузер відкриває локально.
+      MINT_SITE_DOMAIN: ${MINT_SITE_DOMAIN-localhost}
+      # Закріплення опублікованих колекцій у Filebase (кнопка Pin in Filebase): IPFS-бакет і S3-ключ акаунта.
+      FILEBASE_BUCKET: ${FILEBASE_BUCKET:-}
+      FILEBASE_S3_KEY: ${FILEBASE_S3_KEY:-}
+      FILEBASE_S3_SECRET: ${FILEBASE_S3_SECRET:-}
+    ports:
+      - "${APP_PORT:-9012}:9012"
+    volumes:
+      - appdata:/app/data
+    restart: unless-stopped
+
+  # Вузол IPFS (Kubo): зберігає й закріплює опубліковані колекції. RPC API (порт 5001) доступний
+  # лише застосунку в мережі compose; на хост виходять HTTP-шлюз і порт обміну з мережею IPFS.
+  ipfs:
+    image: ipfs/kubo:v0.43.1
+    environment:
+      IPFS_PROFILE: server
+    ports:
+      - "${IPFS_GATEWAY_PORT:-8080}:8080"
+      - "4001:4001/tcp"
+      - "4001:4001/udp"
+    volumes:
+      - ipfsdata:/data/ipfs
+    restart: unless-stopped
+
+  ngrok:
+    profiles: ["tunnel"]
+    image: ngrok/ngrok:latest
+    depends_on:
+      - app
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN:-}
+    command: ["http", "app:9012", "--url=${NGROK_DOMAIN:-}"]
+
+  # Cloudflare Quick Tunnel: випадкова адреса https://<слова>.trycloudflare.com без облікового запису,
+  # нова після кожного запуску (тому не для base URI контракту - колекція в IPFS від неї не залежить).
+  cloudflared:
+    profiles: ["quick-tunnel"]
+    image: cloudflare/cloudflared:2026.10.0
+    depends_on:
+      - app
+    command: ["tunnel", "--no-autoupdate", "--url", "http://app:9012"]
+
+  # srv.us: адреса https://<id>.srv.us через SSH без облікового запису; її задає SSH-ключ, який зберігається
+  # в томі tunnelkey, тож після перезапуску адреса та сама.
+  srvus:
+    profiles: ["quick-tunnel"]
+    image: alpine:3.20
+    depends_on:
+      - app
+    command: ["sh", "-c", "apk add --no-cache -q openssh-client && ([ -f /keys/id_ed25519 ] || ssh-keygen -q -t ed25519 -N '' -C generator-tunnel -f /keys/id_ed25519) && exec ssh -T -i /keys/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/keys/known_hosts -o ServerAliveInterval=30 -o ExitOnForwardFailure=yes -R 1:app:9012 srv.us"]
+    volumes:
+      - tunnelkey:/keys
+    restart: unless-stopped
+
+  # localhost.run: випадкова адреса https://<id>.lhr.life через SSH, теж без облікового запису -
+  # запасний варіант, коли сервіс Cloudflare недоступний з мережі.
+  localhostrun:
+    profiles: ["quick-tunnel"]
+    image: alpine:3.20
+    depends_on:
+      - app
+    command: ["sh", "-c", "apk add --no-cache -q openssh-client && exec ssh -T -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=30 -o ExitOnForwardFailure=yes -R 80:app:9012 nokey@localhost.run"]
+    ports:
+      - "4040:4040"
+    restart: unless-stopped
+
+  anvil:
+    profiles: ["chain"]
+    image: ghcr.io/foundry-rs/foundry:latest
+    entrypoint: ["anvil"]
+    # Стан блокчейну зберігається в томі, тож розгорнуті контракти переживають перезапуск.
+    command: ["--host", "0.0.0.0", "--chain-id", "31337", "--state", "/home/foundry/anvil-state.json", "--state-interval", "5"]
+    ports:
+      - "8545:8545"
+    volumes:
+      - anvildata:/home/foundry
+    restart: unless-stopped
+
+volumes:
+  ipfsdata:
+  tunnelkey:
+  pgdata:
+  appdata:
+  anvildata:

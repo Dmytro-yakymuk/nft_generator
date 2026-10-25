@@ -1,0 +1,177 @@
+@import "@/index.scss";
+
+.footer {
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+
+    &__wrapper {
+        display: flex;
+        max-width: 1920px;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    &__control-area {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 40%;
+        height: 531px;
+        overflow-y: scroll;
+        font-family: "SulphurPoint", sans-serif;
+        font-style: normal;
+
+        &__buttons {
+            position: sticky;
+            bottom: 0;
+            background: white;
+        }
+
+        &__delete {
+            display: flex;
+            align-items: center;
+            height: 58px;
+            width: 120px;
+            padding-left: 32px;
+            font-size: 18px;
+            line-height: 18px;
+            background: transparent;
+            background-image: url("@static/images/trash.svg");
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            border: none;
+            color: $websiteDeleteButtonColor;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        #btn-0 {
+            display: none;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #a3a3a3;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 70px;
+            height: 300px;
+        }
+
+        &__title {
+            margin-bottom: 18px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+            color: #000;
+        }
+
+        &__value {
+            width: 95%;
+            height: 56px;
+            padding-left: 18px;
+            border: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            font-size: 20px;
+            line-height: 20px;
+            text-transform: capitalize;
+            color: #000;
+
+            &::placeholder {
+                color: #000;
+            }
+        }
+
+        &__add-paragraph,
+        &__save-paragraph {
+            width: 95%;
+            height: 60px;
+            margin: 20px 0 0;
+            background: #000;
+
+            &__btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 60px;
+                padding: 0 27px;
+                border: none;
+                background: none;
+                cursor: pointer;
+
+                &__text {
+                    font-family: "SulphurPoint", sans-serif;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #fff;
+                }
+            }
+
+            &__plus {
+                position: absolute;
+                right: 50px;
+                top: 35px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    label {
+        margin: 32px auto 8px 0;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    &__content {
+        display: flex;
+        position: relative;
+        width: 55%;
+        height: 531px;
+        margin-left: 5%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), rgba(218, 217, 217, 0.26);
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 30%;
+            padding: 4% 5%;
+            background: #000;
+            font-family: "SulphurPoint", sans-serif;
+            font-style: normal;
+        }
+
+        &__link {
+            margin: 0 auto;
+            padding: 5px;
+            max-width: 90%;
+            font-size: 12px;
+            line-height: 12px;
+            word-break: break-word;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import "@/index.scss";
+
+.activity-pagination {
+    display: flex;
+    align-items: center;
+    margin: auto 0 50px auto;
+
+    &__prev-disabled,
+    &__next-disabled {
+        cursor: not-allowed;
+
+        span {
+            margin: auto 30px;
+            color: #ccc;
+        }
+
+        svg {
+
+            path {
+                fill: #ccc;
+            }
+        }
+    }
+
+    &__prev,
+    &__next {
+        cursor: pointer;
+
+        span {
+            margin: auto 30px;
+            color: #000;
+        }
+
+        svg {
+
+            path {
+                fill: #000;
+            }
+        }
+    }
+
+    &__prev,
+    &__next,
+    &__prev-disabled,
+    &__next-disabled {
+        display: flex;
+        align-items: center;
+    }
+}

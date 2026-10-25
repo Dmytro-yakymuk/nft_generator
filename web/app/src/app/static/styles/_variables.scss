@@ -1,0 +1,34 @@
+/* Sass variables assigns a value to a name that begins with $,
+* and then refers to that name instead of the value itself.
+* Variables make it possible to reduce repetition, do complex math,
+* configure libraries, and much more. */
+
+// Home
+$firstTextColor: #000;
+
+// Create Project
+$createProjectMainBorderColor: #e0e0e0;
+$creteProjectLinearGradient: linear-gradient(91.03deg, #7342ff 0%, #dfd7f7 84.37%);
+$createProjectOnHoverLinearGradient: linear-gradient(134.86deg, #fdfcff 0%, #f1f3ff 100%);
+
+// Popup
+$popupLinearGradient: linear-gradient(116.82deg, #eff3fb 0%, #fff8f8 100%);
+
+// Project Navigation
+$projectNavigationMainBackgroundColor: #3d3d3d;
+
+// Project Edit
+$projectEditMainLinearGradient: -webkit-linear-gradient(#e192dd 3.33%, #638de6 100%);
+$projectEditBorderImageLinearGradient: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+
+// Website
+$websiteScrollbarTrackColor: #f1f1f1;
+$websiteScrollbarThumbColor: #f1f1f1;
+$websiteDeleteButtonColor: #8f8f8f;
+$websiteMainBackgroundColor: #fdfdfd;
+$websiteHeaderNavigationBackground: #f8f8f8;
+$websiteMainLinearGradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%), #dad9d9;
+$websiteMainColor: #484848;
+
+// HowItWorks
+$howItWorksLinearGradient: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);

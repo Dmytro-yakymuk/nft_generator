@@ -1,0 +1,6 @@
+/* Sass’s @extend rule solves problems like inherit the styles.
+* It tells Sass that one selector should inherit the styles of another. */
+
+$desktopBreakPoint: 1024px;
+$tabletBreakPoint: 800px;
+$phoneBreakPoint: 600px;

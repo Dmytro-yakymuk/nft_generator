@@ -1,0 +1,9 @@
+whitelist_size,variant,setup_gas,setup_txs,mint_gas_mean,proof_length,network
+10,merkle,46106,1,110656,4,anvil
+10,mapping,252658,1,106506,0,anvil
+100,merkle,46106,1,113021,7,anvil
+100,mapping,2310706,1,106506,0,anvil
+1000,merkle,46106,1,115506,10,anvil
+1000,mapping,22914948,2,106506,0,anvil
+10000,merkle,46106,1,118739,14,anvil
+10000,mapping,229150776,20,106506,0,anvil

@@ -1,0 +1,65 @@
+{
+  "network": "mainnet",
+  "chainId": 1,
+  "contract": "CollectionNFT",
+  "address": "0x845f08d28DadfE285DFCb4132316003397500147",
+  "deployTransaction": "0xa0356898bc68c8f9b1081103885dea6fdc4d7c331e4e8153602e85bfa1e6f6b1",
+  "block": 26269231,
+  "timestamp": "2026-10-25T10:55:47Z",
+  "gasUsed": 2141777,
+  "cost": "0.000098207 ETH",
+  "deployer": "0x8B0E1c4658612D9170eb74979119bdbB60ABA6f9",
+  "compiler": "solc 0.8.24, optimizer 200 runs",
+  "verified": [
+    "sourcify",
+    "blockscout"
+  ],
+  "explorer": "https://eth.blockscout.com/address/0x845f08d28DadfE285DFCb4132316003397500147",
+  "constructor": {
+    "baseURI": "ipfs://bafybeidsypevgmrwdf6zeamm6t3yktmwveiua76whgkexpkv3zrqey7vpa/",
+    "merkleRoot": "0x057fc4064fb2670fda407fdc484e22a107ea0a10ad227c9f2b6a2b4317d5e2cb",
+    "name": "Cosmic Critters",
+    "symbol": "NFT",
+    "maxSupply": 100,
+    "priceWei": "1000000000000000",
+    "maxPerMint": 5
+  },
+  "project": {
+    "id": "676db39c-e9f7-45a0-9e57-97f9bd0bf075",
+    "name": "Cosmic Critters",
+    "nftCount": 100,
+    "imagesCID": "bafybeied4hogzeb3vm7jxu7o2b57xpcbdlxbar674itlx3twep5d7gnivu",
+    "metadataCID": "bafybeidsypevgmrwdf6zeamm6t3yktmwveiua76whgkexpkv3zrqey7vpa"
+  },
+  "mintSite": "/sites/cosmic-critters",
+  "transactions": [
+    {
+      "method": "mintWhitelist",
+      "from": "0x8B0E1c4658612D9170eb74979119bdbB60ABA6f9",
+      "amount": 2,
+      "hash": "0x49d8dd163d966a58073f19e484f588c9f2c57b41980df77b75a1b9c57ded3bb7",
+      "block": 26270406,
+      "gasUsed": 144009
+    },
+    {
+      "method": "setMerkleRoot",
+      "hash": "0xc2d2e4452cd50a11b442618643576f4161160b0dffae23abed43286315a7db69",
+      "block": 26270409,
+      "gasUsed": 29006
+    },
+    {
+      "method": "mintWhitelist",
+      "from": "0x8463521F038474FE00C94CD2956c3DB616b82402",
+      "amount": 2,
+      "hash": "0x496dc53785ee670fd5288b86b6f2244cce5da4fe42b1a6a24d3adfa775055bc5",
+      "block": 26270414,
+      "gasUsed": 127728
+    },
+    {
+      "method": "withdraw",
+      "hash": "0xc87f3cafac07a2849d42aec3462df292a10aebf5376cc84b8322829bf2cffc95",
+      "block": 26270417,
+      "gasUsed": 30337
+    }
+  ]
+}

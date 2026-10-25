@@ -1,0 +1,25 @@
+{
+  "network": "anvil",
+  "chainId": 31337,
+  "contract": "CollectionNFT",
+  "address": "0x34ee84036c47d852901b7069abd80171d9a489a6",
+  "deployTransaction": "0x4cb34180d3f233d6ec5469b990d6a0bb5e52c98e97405812cfac2fff10c78eee",
+  "block": 53,
+  "gasUsed": 2141789,
+  "deployer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "compiler": "solc 0.8.24, optimizer 200 runs",
+  "constructor": {
+    "baseURI": "http://localhost:9012/metadata/0c98944f-0eb0-4b78-8e35-9eb9525e0191/",
+    "merkleRoot": "0x299933cac28b9df1ae6dbf7f5d9814b5fe409a67795ed15dea6135b5fe78c6e3",
+    "name": "Demo Collection",
+    "symbol": "NFT",
+    "maxSupply": 10,
+    "priceWei": "1000000000000000",
+    "maxPerMint": 5
+  },
+  "project": {
+    "id": "0c98944f-0eb0-4b78-8e35-9eb9525e0191",
+    "name": "Demo Collection",
+    "nftCount": 10
+  }
+}

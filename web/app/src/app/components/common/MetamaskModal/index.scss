@@ -1,0 +1,61 @@
+@import "@/index.scss";
+
+.metamask-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    font-family: "SpaceGrotesk", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: -0.011em;
+    background-color: rgba(0, 0, 0, 0.33);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 400px;
+        height: 455px;
+        padding: 50px 40px 45px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        margin-bottom: 16px;
+        color: black;
+    }
+
+    &__description {
+        margin-bottom: 54px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16px;
+        letter-spacing: -0.011em;
+        text-align: center;
+        color: black;
+    }
+
+    &__button {
+        width: 100%;
+        height: 52px;
+        margin-top: 70px;
+        display: flex;
+        font-size: 14px;
+        line-height: 17px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+    }
+}

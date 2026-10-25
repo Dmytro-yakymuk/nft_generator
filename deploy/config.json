@@ -1,0 +1,103 @@
+{
+    "database": "${DATABASE_URL:-postgres://postgres:postgres@localhost:5432/generator?sslmode=disable}",
+    "config": {
+        "console": {
+            "server": {
+                "address": ":9012",
+                "staticDir": "./web/app",
+                "layersImagesDir": "./data/files",
+                "projectsDir": "./web/public-pages",
+                "auth": {
+                    "cookieName": "generator_auth",
+                    "path": "/"
+                },
+                "ipfsGatewayUrl": "${IPFS_GATEWAY_URL:-http://localhost:8080}",
+                "mintSiteDomain": "${MINT_SITE_DOMAIN:-}",
+                "chain": {
+                    "chainId": "${CHAIN_ID:-0x7a69}",
+                    "chainName": "${CHAIN_NAME:-Anvil}",
+                    "rpcUrl": "${CHAIN_RPC_URL:-http://localhost:8545}",
+                    "blockExplorerUrl": "${CHAIN_EXPLORER_URL}"
+                }
+            },
+            "emails": {
+                "provider": "mock",
+                "from": "noreply@generator.local"
+            }
+        },
+        "users": {
+            "auth": {
+                "tokenSecret": "${TOKEN_SECRET:-local-development-secret}"
+            }
+        },
+        "fileStore": {
+            "layersPath": "./data/files",
+            "outputPath": "./data/files/generated"
+        },
+        "localFileStore": {
+            "imagesPath": "./data/files"
+        },
+        "layers": {
+            "width": 500,
+            "height": 500,
+            "workers": ${GENERATION_WORKERS:-0},
+            "pngCompression": "${GENERATION_PNG_COMPRESSION:-default}"
+        },
+        "images": {
+            "imagesPath": "generated",
+            "fileStorage": {
+                "s3Gateway": "${S3_GATEWAY}",
+                "accessKey": "${S3_ACCESS_KEY}",
+                "secretKey": "${S3_SECRET_KEY}",
+                "region": "us-east-1"
+            },
+            "bucket": "${S3_BUCKET}"
+        },
+        "metadata": {
+            "outputPath": "metadata",
+            "fileStorage": {
+                "s3Gateway": "${S3_GATEWAY}",
+                "accessKey": "${S3_ACCESS_KEY}",
+                "secretKey": "${S3_SECRET_KEY}",
+                "region": "us-east-1"
+            },
+            "bucket": "${S3_BUCKET}",
+            "metadata": {
+                "name": "${COLLECTION_NAME:-Generator NFT}",
+                "description": "${COLLECTION_DESCRIPTION:-NFT collection generated with Generator}",
+                "externalURL": "${PUBLIC_URL:-http://localhost:9012}",
+                "image": "${PUBLIC_URL:-http://localhost:9012}/images/generated/%s/%d.png"
+            }
+        },
+        "projects": {
+            "imagesPath": "/images",
+            "ipfsApiUrl": "${IPFS_API_URL:-http://ipfs:5001}",
+            "filebase": {
+                "endpoint": "${FILEBASE_ENDPOINT:-https://s3.filebase.com}",
+                "bucket": "${FILEBASE_BUCKET}",
+                "accessKey": "${FILEBASE_S3_KEY}",
+                "secretKey": "${FILEBASE_S3_SECRET}"
+            },
+            "fileStorage": {
+                "s3Gateway": "${S3_GATEWAY}",
+                "accessKey": "${S3_ACCESS_KEY}",
+                "secretKey": "${S3_SECRET_KEY}",
+                "region": "us-east-1"
+            },
+            "bucket": "${S3_BUCKET}"
+        },
+        "whitelist": {
+            "pagination": {
+                "limit": 10,
+                "page": 1
+            }
+        },
+        "nfts": {
+            "baseUri": "${PUBLIC_URL:-http://localhost:9012}/metadata/%s/"
+        },
+        "dashboard": {
+            "rpcUrl": "${CHAIN_SERVER_RPC_URL}",
+            "logsBlockRange": ${CHAIN_LOGS_BLOCK_RANGE:-10000}
+        }
+    }
+}

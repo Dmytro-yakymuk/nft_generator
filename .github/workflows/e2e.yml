@@ -1,0 +1,34 @@
+name: "E2E"
+on:
+  push:
+    branches: [ master, platform-update ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  e2e:
+    name: Playwright
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      # без .env платформа налаштована на Anvil, як і імітація MetaMask у тестах.
+      - name: Start the platform, PostgreSQL, IPFS and Anvil
+        run: |
+          docker compose up -d --build --wait db ipfs app
+          docker compose --profile chain up -d anvil
+      - name: Install dependencies
+        run: |
+          npm ci
+          node node_modules/@playwright/test/cli.js install --with-deps chromium-headless-shell
+          cd web/app && npm ci --legacy-peer-deps
+      - name: Run the end-to-end tests
+        run: make e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-results
+          path: tests/e2e/results/

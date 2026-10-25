@@ -1,0 +1,10 @@
+.*
+**/node_modules
+web/app/dist
+web/app/test-results
+tests
+data
+configs
+contracts/bin
+generator
+*.md

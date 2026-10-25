@@ -1,0 +1,13 @@
+// Порядок шарів (пріоритет: перший - найнижчий) процедурного демонстраційного набору.
+
+const { BACKGROUND, BACKDROP, CELESTIAL, AURA, WINGS } = require('./scene');
+const { SKIN, SKIN_PATTERN, CLOTHING, BADGE, NECKLACE, EARRINGS } = require('./character');
+const { CHEEK, FACE_MARK, NOSE_LAYER, MOUTH_LAYER, MOUTH_ITEM, EYE_LAYER, IRIS, HAIR, BROWS, EYEWEAR } = require('./face');
+const { HEADGEAR, PET_LAYER, PARTICLES, LIGHTING, FRAME } = require('./top');
+
+module.exports = [
+    BACKGROUND, BACKDROP, CELESTIAL, AURA, WINGS,
+    SKIN, SKIN_PATTERN, CLOTHING, BADGE, NECKLACE, EARRINGS,
+    CHEEK, FACE_MARK, NOSE_LAYER, MOUTH_LAYER, MOUTH_ITEM, EYE_LAYER, IRIS, HAIR, BROWS, EYEWEAR,
+    HEADGEAR, PET_LAYER, PARTICLES, LIGHTING, FRAME,
+];

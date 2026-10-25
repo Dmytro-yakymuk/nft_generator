@@ -1,0 +1,71 @@
+@import "@/index.scss";
+
+.dashboard__values {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 23%;
+        height: 93px;
+        padding: 21px;
+        background: linear-gradient(180deg, #fafafc 0%, #fff 100%);
+
+        .price {
+            padding-bottom: 8px;
+            font-family: "SulphurPoint", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+            color: #000;
+        }
+
+        .title {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #adadad;
+        }
+    }
+}
+
+@media screen and (max-width: $desktopBreakPoint) {
+
+    .dashboard__values {
+
+        &__item {
+
+            .price {
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            .title {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tabletBreakPoint) {
+
+    .dashboard__values {
+
+        &__item {
+
+            .price {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            .title {
+                font-size: 9px;
+            }
+        }
+    }
+}

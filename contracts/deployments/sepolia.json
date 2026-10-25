@@ -1,0 +1,87 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contract": "CollectionNFT",
+  "address": "0x2df71a8114129312c0e5e26c26a9bc61e22d6fd7",
+  "deployTransaction": "0x2416b233762751ea1db673645f5976b62631280aad661944a0754463dfd7bc87",
+  "block": 11891261,
+  "gasUsed": 16039799,
+  "cost": "0.0401 ETH",
+  "deployer": "0xa7aF8410b61CA79583F9995963fa947DA52cce4e",
+  "compiler": "solc 0.8.24, optimizer 200 runs",
+  "explorer": "https://sepolia.etherscan.io/address/0x2df71a8114129312c0e5e26c26a9bc61e22d6fd7",
+  "constructor": {
+    "baseURI": "http://localhost:9012/metadata/7c4c9655-8232-4a8b-a1ef-9b4a310af4b1/",
+    "merkleRoot": "0x133ffeb6481b02dce19e0fe4961971862d7e374dba128b13a081109437346d45",
+    "name": "Generator Demo",
+    "symbol": "NFT"
+  },
+  "project": {
+    "id": "7c4c9655-8232-4a8b-a1ef-9b4a310af4b1",
+    "name": "Generator Demo",
+    "nftCount": 10
+  },
+  "mintSite": "/sites/generator-demo",
+  "transactions": [
+    {
+      "method": "mintWhitelist",
+      "from": "0xa7aF8410b61CA79583F9995963fa947DA52cce4e",
+      "amount": 3,
+      "hash": "0x70d4e355cba1a5645291f6f5bd974ff9fd93715f69636affae659ea9c3a00959",
+      "gasUsed": 699523
+    },
+    {
+      "method": "setSaleState",
+      "args": "true",
+      "hash": "0x03ffb664fa14ea65453e4479647e2d2a129414e201f8623cfe5bf29be5c8fa55",
+      "gasUsed": 29952
+    },
+    {
+      "method": "mint",
+      "from": "0xa7aF8410b61CA79583F9995963fa947DA52cce4e",
+      "amount": 2,
+      "hash": "0x47e7262355db908ff399e700232282cdeb467b45d88cb13181a66b88db857f94",
+      "gasUsed": 275425
+    },
+    {
+      "method": "withdraw",
+      "hash": "0x3d9e95444bcb777775c34240ba3f4b3f0ff13a5917965f549fab527ce47646ec",
+      "gasUsed": 26593
+    },
+    {
+      "method": "mint",
+      "from": "0xFf11E1F8721dadd907e8A9519B8111E20717c580",
+      "amount": 2,
+      "hash": "0xaec8f3e258a5dec7b1a8b5e04c173cca9758d8d35ad54c3441352abb670b177a",
+      "gasUsed": 373345
+    },
+    {
+      "method": "setMerkleRoot",
+      "hash": "0x8608226aacdb9a04c2c004d78bb8cbb0ec62aa37cff0b15192af28ded7705c38",
+      "gasUsed": 30072
+    },
+    {
+      "method": "mintWhitelist",
+      "from": "0xFf11E1F8721dadd907e8A9519B8111E20717c580",
+      "amount": 1,
+      "hash": "0xd0b67499612a4039b6e305723ec2e21d4ccb07988c9136cdc3dcaab9c74d2fc7",
+      "gasUsed": 276817
+    },
+    {
+      "method": "setSaleState",
+      "args": "false",
+      "hash": "0x3eea72608246896d3816917d75a64890c57f60e31059cf94109ecc48734cda69"
+    },
+    {
+      "method": "setSaleState",
+      "args": "true",
+      "hash": "0x08709996c47af7db5f8850cf48349ea35a1218a7fe4251ec107424ff92e057d1"
+    },
+    {
+      "method": "withdraw",
+      "hash": "0xd71ed9ed85e6ff1af6d4e9a5ef340e294b9c31653563bb957cc95c422e1e9a4d",
+      "block": 11899890,
+      "gasUsed": 26593
+    }
+  ]
+}

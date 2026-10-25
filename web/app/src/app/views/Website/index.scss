@@ -1,0 +1,185 @@
+@import "@/index.scss";
+
+.publish-project {
+
+    &__subdomain {
+        display: block;
+        margin-top: 16px;
+        text-align: center;
+        font-size: 16px;
+        color: #000;
+        word-break: break-all;
+    }
+
+    &__name {
+        padding-top: 42px;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 48px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    &__input {
+        position: absolute;
+        top: 167px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        width: 414px;
+        height: 58px;
+        padding-left: 20px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        font-family: "SulphurPoint", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: lowercase;
+
+        .project-name {
+            color: #000;
+            caret-color: blue;
+
+            &:focus {
+                color: blue;
+            }
+        }
+
+        .domain {
+            color: #8e8e8e;
+        }
+    }
+
+    &__domain {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            padding: 0 0 14px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+            text-transform: capitalize;
+            color: #000;
+        }
+
+        #domain {
+            position: relative;
+            width: 100%;
+            height: 58px;
+            padding-left: 26px;
+            border: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+            text-transform: lowercase;
+            color: #000;
+
+            &::placeholder {
+                color: #000;
+            }
+        }
+
+        &__warning {
+            display: hidden;
+            margin: 14px 0 30px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            color: #000;
+        }
+    }
+
+    &__royalties {
+        margin-top: 54px;
+    }
+
+    &__slider__wrapper {
+        width: 100%;
+        margin: 17px 0 32px;
+    }
+
+    &__slider {
+        position: relative;
+        border: 1px solid transparent;
+        z-index: 0;
+
+        &__track-0 {
+            height: 12px;
+            background: #000;
+        }
+
+        &__track-1 {
+            height: 12px;
+            background: linear-gradient(270deg, #c4c4c4 0%, rgba(196, 196, 196, 0) 100%);
+        }
+
+        &__thumb {
+            top: -2px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+            cursor: pointer;
+        }
+    }
+
+    &__commision,
+    &__royalties {
+        display: flex;
+        justify-content: space-between;
+
+        &__title {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        &__value {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 62px;
+        margin: auto 0 0;
+        border: none;
+        background: #000;
+        cursor: pointer;
+
+        &__text {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+            color: #fff;
+        }
+    }
+}
+
+.website-section-save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    margin: 43px 0 0;
+    background: #000;
+    padding: 25px;
+    border: none;
+    cursor: pointer;
+
+    &__text {
+        font-family: "SulphurPoint", sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 18px;
+        color: #fff;
+    }
+}

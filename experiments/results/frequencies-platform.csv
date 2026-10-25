@@ -1,0 +1,251 @@
+layer,variant,weight,expected_share,count,tokens
+"Background","Sunset",140,0.11885,127,1000
+"Background","Aurora",120,0.10187,100,1000
+"Background","Deep Space",110,0.09338,84,1000
+"Background","Mint Dream",130,0.11036,108,1000
+"Background","Peach Sky",130,0.11036,115,1000
+"Background","Ocean",120,0.10187,107,1000
+"Background","Lavender Haze",120,0.10187,117,1000
+"Background","Golden Hour",90,0.07640,68,1000
+"Background","Cherry Blossom",90,0.07640,68,1000
+"Background","Midnight",60,0.05093,47,1000
+"Background","Bubblegum",60,0.05093,52,1000
+"Background","Holographic",8,0.00679,7,1000
+"Backdrop","Stars",90,0.08911,85,1000
+"Backdrop","Polka Dots",90,0.08911,95,1000
+"Backdrop","Sunburst",80,0.07921,75,1000
+"Backdrop","Synthwave Grid",40,0.03960,37,1000
+"Backdrop","Waves",80,0.07921,81,1000
+"Backdrop","Hexagons",60,0.05941,70,1000
+"Backdrop","Clouds",90,0.08911,85,1000
+"Backdrop","Checkerboard",50,0.04950,34,1000
+"Backdrop","Diagonal Stripes",70,0.06931,56,1000
+"Backdrop","Bokeh",60,0.05941,56,1000
+"Backdrop","None",300,0.29703,326,1000
+"Celestial","Full Moon",90,0.09000,92,1000
+"Celestial","Crescent Moon",110,0.11000,123,1000
+"Celestial","Ringed Planet",70,0.07000,69,1000
+"Celestial","Sun",80,0.08000,81,1000
+"Celestial","Comet",60,0.06000,65,1000
+"Celestial","Twin Moons",40,0.04000,41,1000
+"Celestial","Earth",40,0.04000,35,1000
+"Celestial","Black Hole",10,0.01000,9,1000
+"Celestial","None",500,0.50000,485,1000
+"Aura","Pink Glow",80,0.08000,77,1000
+"Aura","Cyan Glow",80,0.08000,76,1000
+"Aura","Gold Glow",60,0.06000,68,1000
+"Aura","Rainbow Ring",40,0.04000,28,1000
+"Aura","Fire Aura",50,0.05000,55,1000
+"Aura","Electric Aura",40,0.04000,30,1000
+"Aura","Shadow Aura",50,0.05000,34,1000
+"Aura","None",600,0.60000,632,1000
+"Wings","Angel",60,0.05970,59,1000
+"Wings","Bat",50,0.04975,45,1000
+"Wings","Butterfly",50,0.04975,62,1000
+"Wings","Fairy",50,0.04975,41,1000
+"Wings","Dragon",25,0.02488,24,1000
+"Wings","Mecha",15,0.01493,14,1000
+"Wings","Phoenix",5,0.00498,6,1000
+"Wings","None",750,0.74627,749,1000
+"Skin","Peach",130,0.13713,140,1000
+"Skin","Mint",110,0.11603,120,1000
+"Skin","Lavender",110,0.11603,107,1000
+"Skin","Sky",110,0.11603,120,1000
+"Skin","Lemon",100,0.10549,115,1000
+"Skin","Coral",100,0.10549,100,1000
+"Skin","Snow",90,0.09494,92,1000
+"Skin","Charcoal",70,0.07384,66,1000
+"Skin","Alien",60,0.06329,73,1000
+"Skin","Ghost",30,0.03165,31,1000
+"Skin","Chrome",20,0.02110,21,1000
+"Skin","Galaxy",10,0.01055,10,1000
+"Skin","Gold",8,0.00844,5,1000
+"Skin Pattern","Spots",60,0.08054,78,1000
+"Skin Pattern","Tiger Stripes",50,0.06711,52,1000
+"Skin Pattern","Sparkle Skin",40,0.05369,47,1000
+"Skin Pattern","Patches",50,0.06711,65,1000
+"Skin Pattern","Scales",30,0.04027,39,1000
+"Skin Pattern","Tribal",30,0.04027,36,1000
+"Skin Pattern","Constellation",20,0.02685,30,1000
+"Skin Pattern","Cracks",15,0.02013,26,1000
+"Skin Pattern","None",450,0.60403,627,1000
+"Clothing","Red Hoodie",90,0.11029,112,1000
+"Clothing","Navy Hoodie",80,0.09804,109,1000
+"Clothing","Striped Tee",80,0.09804,107,1000
+"Clothing","White Tee",90,0.11029,109,1000
+"Clothing","Tuxedo",40,0.04902,48,1000
+"Clothing","Kimono",40,0.04902,51,1000
+"Clothing","Space Suit",30,0.03676,34,1000
+"Clothing","Knight Armor",20,0.02451,24,1000
+"Clothing","Varsity Jacket",60,0.07353,82,1000
+"Clothing","Leather Jacket",50,0.06127,59,1000
+"Clothing","Overalls",50,0.06127,53,1000
+"Clothing","Turtleneck",60,0.07353,65,1000
+"Clothing","Gold Robe",6,0.00735,4,1000
+"Clothing","None",120,0.14706,143,1000
+"Badge","Star Pin",60,0.06897,73,1000
+"Badge","Heart Pin",60,0.06897,72,1000
+"Badge","Lightning Pin",50,0.05747,67,1000
+"Badge","Smiley Pin",50,0.05747,61,1000
+"Badge","Planet Pin",30,0.03448,37,1000
+"Badge","Flame Pin",30,0.03448,33,1000
+"Badge","Diamond Pin",15,0.01724,15,1000
+"Badge","GM Pin",30,0.03448,34,1000
+"Badge","Peace Pin",25,0.02874,35,1000
+"Badge","None",520,0.59770,573,1000
+"Necklace","Gold Chain",70,0.08485,70,1000
+"Necklace","Pearls",60,0.07273,88,1000
+"Necklace","Bow Tie",70,0.08485,93,1000
+"Necklace","Red Scarf",50,0.06061,57,1000
+"Necklace","Medal",30,0.03636,19,1000
+"Necklace","Crystal Pendant",25,0.03030,32,1000
+"Necklace","Spiked Collar",30,0.03636,40,1000
+"Necklace","Bandana",40,0.04848,51,1000
+"Necklace","None",450,0.54545,550,1000
+"Earrings","Gold Hoops",80,0.08421,84,1000
+"Earrings","Diamond Studs",60,0.06316,68,1000
+"Earrings","Pearl Drops",50,0.05263,46,1000
+"Earrings","Silver Cross",30,0.03158,30,1000
+"Earrings","Feathers",40,0.04211,48,1000
+"Earrings","Moon & Star",25,0.02632,16,1000
+"Earrings","Cherries",15,0.01579,19,1000
+"Earrings","None",650,0.68421,689,1000
+"Cheeks","Pink Blush",100,0.12903,118,1000
+"Cheeks","Coral Blush",70,0.09032,96,1000
+"Cheeks","Freckles",70,0.09032,84,1000
+"Cheeks","Heart Cheeks",40,0.05161,54,1000
+"Cheeks","Spirals",20,0.02581,24,1000
+"Cheeks","Whiskers",50,0.06452,54,1000
+"Cheeks","Star Cheeks",25,0.03226,26,1000
+"Cheeks","None",400,0.51613,544,1000
+"Face Mark","Scar",40,0.04124,44,1000
+"Face Mark","Star Tattoo",50,0.05155,65,1000
+"Face Mark","Tear Drop",40,0.04124,45,1000
+"Face Mark","Bandage",50,0.05155,52,1000
+"Face Mark","War Paint",30,0.03093,32,1000
+"Face Mark","Lightning",20,0.02062,24,1000
+"Face Mark","Heart Tattoo",40,0.04124,34,1000
+"Face Mark","None",700,0.72165,704,1000
+"Nose","Button",120,0.15094,158,1000
+"Nose","Cat Nose",80,0.10063,111,1000
+"Nose","Dot",100,0.12579,134,1000
+"Nose","Clown",15,0.01887,19,1000
+"Nose","Pig Snout",30,0.03774,29,1000
+"Nose","None",450,0.56604,549,1000
+"Mouth","Smile",140,0.18277,179,1000
+"Mouth","Big Grin",90,0.11749,113,1000
+"Mouth","Laugh",90,0.11749,119,1000
+"Mouth","Cat Mouth",80,0.10444,107,1000
+"Mouth","Surprised",60,0.07833,88,1000
+"Mouth","Smirk",70,0.09138,88,1000
+"Mouth","Fangs",40,0.05222,50,1000
+"Mouth","Tongue Out",60,0.07833,83,1000
+"Mouth","Flat",50,0.06527,58,1000
+"Mouth","Frown",30,0.03916,40,1000
+"Mouth","Buck Teeth",30,0.03916,45,1000
+"Mouth","Zigzag",20,0.02611,24,1000
+"Mouth","Gold Grill",6,0.00783,6,1000
+"Mouth Item","Bubble Gum",40,0.03980,40,1000
+"Mouth Item","Lollipop",35,0.03483,36,1000
+"Mouth Item","Rose",25,0.02488,25,1000
+"Mouth Item","Pacifier",25,0.02488,31,1000
+"Mouth Item","Leaf",30,0.02985,36,1000
+"Mouth Item","None",850,0.84577,832,1000
+"Eyes","Round",150,0.26786,268,1000
+"Eyes","Big",110,0.19643,204,1000
+"Eyes","Wide",100,0.17857,205,1000
+"Eyes","Almond",90,0.16071,140,1000
+"Eyes","Droopy",60,0.10714,99,1000
+"Eyes","Sharp",50,0.08929,84,1000
+"Iris","Brown",140,0.18996,201,1000
+"Iris","Hazel",100,0.13569,136,1000
+"Iris","Blue",120,0.16282,152,1000
+"Iris","Green",100,0.13569,150,1000
+"Iris","Violet",70,0.09498,87,1000
+"Iris","Amber",60,0.08141,90,1000
+"Iris","Red",40,0.05427,46,1000
+"Iris","Ice",40,0.05427,48,1000
+"Iris","Heterochromia",20,0.02714,26,1000
+"Iris","Cat Slit",25,0.03392,35,1000
+"Iris","Galaxy",12,0.01628,13,1000
+"Iris","Rainbow",6,0.00814,8,1000
+"Iris","Laser",4,0.00543,8,1000
+"Hair","Tuft",80,0.09780,88,1000
+"Hair","Mohawk",50,0.06112,61,1000
+"Hair","Curly",70,0.08557,79,1000
+"Hair","Spiky",60,0.07335,65,1000
+"Hair","Bowl Cut",60,0.07335,62,1000
+"Hair","Side Swoop",60,0.07335,80,1000
+"Hair","Space Buns",50,0.06112,67,1000
+"Hair","Leaf Sprout",50,0.06112,66,1000
+"Hair","Afro",30,0.03667,45,1000
+"Hair","Flame Hair",8,0.00978,13,1000
+"Hair","None",300,0.36675,374,1000
+"Brows","Neutral",120,0.17647,199,1000
+"Brows","Raised",80,0.11765,107,1000
+"Brows","Angry",70,0.10294,104,1000
+"Brows","Worried",60,0.08824,94,1000
+"Brows","Thick",50,0.07353,71,1000
+"Brows","Dots",40,0.05882,57,1000
+"Brows","Unibrow",10,0.01471,12,1000
+"Brows","None",250,0.36765,356,1000
+"Eyewear","Round Glasses",70,0.06829,58,1000
+"Eyewear","Aviators",60,0.05854,70,1000
+"Eyewear","Heart Shades",40,0.03902,45,1000
+"Eyewear","Cyber Visor",30,0.02927,20,1000
+"Eyewear","Monocle",25,0.02439,18,1000
+"Eyewear","3D Glasses",30,0.02927,29,1000
+"Eyewear","Star Shades",20,0.01951,27,1000
+"Eyewear","Nerd Glasses",50,0.04878,49,1000
+"Eyewear","None",700,0.68293,684,1000
+"Headgear","Crown",50,0.04237,31,1000
+"Headgear","Beanie",70,0.05932,69,1000
+"Headgear","Baseball Cap",70,0.05932,55,1000
+"Headgear","Wizard Hat",30,0.02542,30,1000
+"Headgear","Top Hat",40,0.03390,31,1000
+"Headgear","Halo",30,0.02542,25,1000
+"Headgear","Party Hat",50,0.04237,48,1000
+"Headgear","Viking Helmet",25,0.02119,19,1000
+"Headgear","Cat Ears",60,0.05085,52,1000
+"Headgear","Bunny Ears",50,0.04237,51,1000
+"Headgear","Devil Horns",40,0.03390,33,1000
+"Headgear","Antennae",40,0.03390,34,1000
+"Headgear","Flower Crown",40,0.03390,39,1000
+"Headgear","Propeller Cap",25,0.02119,20,1000
+"Headgear","Headphones",60,0.05085,44,1000
+"Headgear","None",500,0.42373,419,1000
+"Pet","Ghost",60,0.05769,58,1000
+"Pet","Bird",50,0.04808,44,1000
+"Pet","Slime",50,0.04808,56,1000
+"Pet","Robot Drone",30,0.02885,28,1000
+"Pet","Kitten",40,0.03846,43,1000
+"Pet","Jellyfish",30,0.02885,32,1000
+"Pet","Mini Dragon",10,0.00962,9,1000
+"Pet","UFO",20,0.01923,7,1000
+"Pet","None",750,0.72115,723,1000
+"Particles","Sparkles",80,0.09195,87,1000
+"Particles","Bubbles",70,0.08046,86,1000
+"Particles","Hearts",60,0.06897,59,1000
+"Particles","Snowflakes",50,0.05747,63,1000
+"Particles","Fireflies",50,0.05747,54,1000
+"Particles","Music Notes",40,0.04598,41,1000
+"Particles","Coins",20,0.02299,32,1000
+"Particles","Petals",50,0.05747,56,1000
+"Particles","None",450,0.51724,522,1000
+"Lighting","Vignette",80,0.08511,72,1000
+"Lighting","Light Leak",50,0.05319,54,1000
+"Lighting","Lens Flare",40,0.04255,47,1000
+"Lighting","Neon Rim",30,0.03191,30,1000
+"Lighting","Spotlight",40,0.04255,39,1000
+"Lighting","Sunbeams",40,0.04255,35,1000
+"Lighting","Glitch",10,0.01064,14,1000
+"Lighting","None",650,0.69149,709,1000
+"Frame","Gold Frame",40,0.04040,43,1000
+"Frame","Silver Frame",40,0.04040,46,1000
+"Frame","Neon Frame",30,0.03030,24,1000
+"Frame","Polaroid",30,0.03030,36,1000
+"Frame","Pixel Border",25,0.02525,24,1000
+"Frame","Rounded Card",40,0.04040,42,1000
+"Frame","Wood Frame",30,0.03030,30,1000
+"Frame","Holo Frame",5,0.00505,9,1000
+"Frame","None",750,0.75758,746,1000

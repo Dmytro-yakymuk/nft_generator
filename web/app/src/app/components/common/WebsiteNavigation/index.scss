@@ -1,0 +1,49 @@
+@import "@/index.scss";
+
+.website-navigation {
+    width: 100%;
+    margin: 10vh auto 80px;
+    font-family: "SulphurPoint", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1920px;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    &__title {
+        margin: 30px 0 28px 0;
+        font-size: 48px;
+        line-height: 48px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+
+        .is-active {
+            background: linear-gradient(91.37deg, #a7a7ff 0%, #d693ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a {
+            padding-right: 3%;
+        }
+
+        .link {
+            font-size: 24px;
+            line-height: 24px;
+            color: #000;
+        }
+    }
+}

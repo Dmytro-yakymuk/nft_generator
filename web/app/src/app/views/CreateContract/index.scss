@@ -1,0 +1,209 @@
+@import "@/index.scss";
+
+.create-contract {
+    display: flex;
+    flex-direction: column;
+    width: 562px;
+    margin: 9.5% auto;
+    font-family: "SulphurPoint", sans-serif;
+
+    &__title {
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 48px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+
+        &__name,
+        &__nft-count,
+        &__mint,
+        &__whitelist,
+        &__submit {
+            width: 100%;
+            height: 56px;
+            margin-top: 10px;
+            padding-left: 20px;
+            border: 1px solid $createProjectMainBorderColor;
+            font-family: "SulphurPoint", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: black;
+            outline: none;
+            cursor: pointer;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+        }
+
+        &__whitelist,
+        &__mint {
+            margin-top: unset;
+            padding-left: 20px;
+
+            &-placeholder {
+                position: absolute;
+                right: 10px;
+                top: 40px;
+                font-size: 20px;
+                color: grey;
+            }
+        }
+
+        &__name-label,
+        &__nft-count-label,
+        &__whitelist-label,
+        &__mint-label {
+            margin-top: 50px;
+            color: black;
+        }
+
+        &__whitelist-label,
+        &__mint-label {
+            margin-top: unset;
+        }
+
+        &__prices {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 50px;
+
+            &__wrapper {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+            }
+        }
+
+        &__whitelist-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80px;
+            margin-top: 48px;
+            background: none;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+
+            &__text {
+                font-family: "SulphurPoint", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 24px;
+                text-transform: capitalize;
+                color: #000;
+            }
+
+            &:hover {
+                border: 1px solid;
+                border-image-source: linear-gradient(
+                    137.05deg,
+                    #e192dd 3.33%,
+                    #638de6 100%
+                );
+                border-image-slice: 1;
+            }
+        }
+
+        &__submit {
+            background-color: black;
+        }
+
+        &__submit-disabled {
+            opacity: 0.9;
+        }
+
+        &__submit,
+        &__submit-disabled {
+            height: 56px;
+            margin-top: 50px;
+            font-size: 18px;
+            color: white;
+            border: none;
+        }
+    }
+}
+
+.publish-contract {
+
+    &__royalties {
+        margin-top: 54px;
+    }
+
+    &__slider__wrapper {
+        width: 100%;
+        margin: 17px 0 32px;
+    }
+
+    &__slider {
+        position: relative;
+        border: 1px solid transparent;
+        z-index: 0;
+
+        &__track-0 {
+            height: 12px;
+            background: #000;
+        }
+
+        &__track-1 {
+            height: 12px;
+            background: linear-gradient(270deg, #c4c4c4 0%, rgba(196, 196, 196, 0) 100%);
+        }
+
+        &__thumb {
+            top: -2px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+            cursor: pointer;
+        }
+    }
+
+    &__commision,
+    &__royalties {
+        display: flex;
+        justify-content: space-between;
+
+        &__title {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        &__value {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 62px;
+        margin: 54px 0 0;
+        border: none;
+        background: #000;
+        cursor: pointer;
+
+        &__text {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+            color: #fff;
+        }
+    }
+}

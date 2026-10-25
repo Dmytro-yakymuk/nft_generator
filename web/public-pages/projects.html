@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Sulphur Point' rel='stylesheet'>
+    <title>{{.Name}}</title>
+    <!-- Сервер підставляє адресу контракту, мережу й параметри продажу через Go html/template. -->
+    <script>window.MINT_SITE = {{.Config}};</script>
+</head>
+<body onclick="visibilityMetamaskPopup()">
+    {{$path := .ImagesPath}}
+    {{$projectID := .ProjectID}}
+	<div class="metamask-notification"></div>
+    <nav class="navbar">
+        <div class="navbar-wrapper">
+            <a class="navbar-link" href="/"><img class="navbar-logo" 
+                src="{{.ImagesPath}}/{{.ProjectID}}/logo.png" alt="Website logo" /></a>
+            <a class="navbar-link" href="#collection">Collections</a>
+            <a class="navbar-link" href="#about">About</a>
+            <a class="navbar-link" href="#roadmap">Roadmap</a>
+            <a class="navbar-link" href="#team">Team</a>
+            <button class="mint" onclick="visibilityMetamaskPopup()">
+                <span class="mint">Mint</span>
+            </button>
+        </div>
+    </nav>
+    <div class="metamask-popup metamask-popup-hidden">
+        <div class="metamask-popup-wrapper">
+            <h1 class="metamask-popup-title">Connect Wallet</h1>
+            <div class="metamask-popup-block" onclick="connect()">
+                <img src="/static/images/metamask.png" alt="Metamask">
+                <span>Metamask</span>
+            </div>
+            <div class="metamask-popup-block" onclick="connect()">
+                <img src="/static/images/walletconnect.png" alt="Wallet connect">
+                <span>Wallet Connect</span>
+            </div>
+        </div>
+    </div>
+    <div class="mint-popup mint-popup-hidden">
+        <div class="mint-popup-wrapper">
+            <h1 class="mint-popup-title">Mint</h1>
+            <div class="mint-popup-info">
+                <span class="title">Sale</span>
+                <span class="mint-popup-phase value">–</span>
+            </div>
+            <div class="mint-popup-info">
+                <span class="title">Total Price</span>
+                <span class="mint-popup-info-value value">–</span>
+            </div>
+            <div class="mint-popup-info">
+                <span class="title">Minted</span>
+                <span class="mint-popup-minted value">–</span>
+            </div>
+            <div class="mint-popup-divider"></div>
+            <div class="mint-popup-info">
+                <span class="title">Quantity</span>
+                <div class="mint-popup-counter">
+                    <img onclick="decreaseMintQuantity()" src="/static/images/minus.png" alt="minus">
+                    <span class="mint-count">1</span>
+                    <img onclick="increaseMintQuantity()" src="/static/images/plus.png" alt="plus">
+                </div>
+            </div>
+            <button class="mint-popup-btn" onclick="mint()">MINT</button>
+        </div>
+    </div>
+    <div class="minted-popup minted-popup-hidden">
+        <div class="minted-popup-wrapper">
+            <h1 class="minted-popup-title">Mint</h1>
+            <span class="minted-popup-info"></span>
+            <a class="minted-popup-link" href="" target="_blank" rel="noopener" hidden>View transaction</a>
+            <button
+                class="minted-popup-btn"
+                onclick="closeMintedPopup()"
+            >Done</button>
+        </div>
+    </div>
+    <div class="mint-loader mint-loader-hidden">
+        <div class="mint-loader-wrapper">
+            <!-- TODO: Need to add gif animation -->
+            <img src="" alt="Loader">
+            <span>Mint In Progress...</span>
+        </div>
+    </div>
+    <main class="main">
+        <section id="header" class="header">
+            <img class="header-image" src="{{$path}}/{{.ProjectID}}/header.png" alt="Website image">
+            <h4 class="header-title">{{.Header.Title}}</h4>
+            <span class="header-description">{{.Header.Description}}</span>
+            <button class="mint">
+                <span class="mint">Mint</span>
+            </button>
+        </section>
+        <section id="collection" class="collection">
+            <div class="collection-wrapper">
+                {{range .ContentNames}}
+                    <img class="collection-image" src="{{$path}}/{{$projectID}}/content/{{.}}" alt="Collection image">
+                {{end}}
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="about-info">
+                <span class="about-info-title">{{.About.Title}}</span>
+                <span class="about-info-description">{{.About.Description}}</span>
+            </div>
+            <img class="about-image" src="{{$path}}/{{$projectID}}/about.png" alt="About image">
+        </section>
+        <section id="team" class="team">
+            <h2 class="team-title">Team</h2>
+            <div class="team-members">
+                {{range .Team}}
+                    <div class="team-member">
+                        <img class="member-logo" src="{{$path}}/{{$projectID}}/members/{{.ID}}.png" alt="Member photo">
+                        <span class="member-name">{{.Name}}</span>
+                        <span class="member-type">{{.Role}}</span>
+                    </div>
+                {{end}}
+            </div>
+        </section>
+        <section id="roadmap" class="roadmap">
+            <h2 class="roadmap-title">Roadmap</h2>
+            <div class="timeline">
+                {{range .Roadmap}}
+                    <div class="roadmap-item">
+                        <div class="content">
+                            <span class="roadmap-item-date">
+                                {{.Date}}
+                            </span>
+                            <span class="roadmap-item-title">
+                                {{.Title}}
+                            </span>
+                            <span class="roadmap-item-decsription">
+                                {{.Description}}
+                            </span>
+                        </div>
+                    </div>
+                {{end}}
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-social">
+                {{range .SocialNetworks}}
+                <a href="{{.Link}}">{{.Title}}</a>
+                {{end}}
+            </div>
+            <span class="footer-powered-by">Powered by Generator.io</span>
+        </div>
+    </footer>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" rel="stylesheet">
+    <link href="/static/css/projects.css" rel="stylesheet">
+</body>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script defer src="/static/js/vendor/ethers.umd.min.js"></script>
+<script defer src="/static/js/private/http/client.js"></script>
+<script defer src="/static/js/api/index.js"></script>
+<script defer src="/static/js/api/whitelist.js"></script>
+<script defer src="/static/js/internal/index.js"></script>
+<script defer src="/static/js/ethers/index.js"></script>
+<script defer src="/static/js/ethers/service.js"></script>
+<script defer src="/static/js/ethers/servicePlugin.js"></script>
+<script defer src="/static/js/index.js"></script>
+<script defer type="module" src="/static/js/slick.js"></script>
+</html>

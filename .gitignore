@@ -1,0 +1,26 @@
+# Mac OS X files
+.DS_Store
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.db
+
+# IDE preferences folders
+/.vscode
+/.vs
+.idea/
+node_modules
+contracts/bin
+
+# Local
+/generator
+configs/
+*.log
+
+# Docker / local run
+.env
+/data/
+/web/public-pages/vendor/

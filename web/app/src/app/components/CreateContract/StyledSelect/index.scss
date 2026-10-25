@@ -1,0 +1,90 @@
+@import "@/index.scss";
+
+.styled-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 109px;
+    margin-top: 45px;
+    border: 1px solid $createProjectMainBorderColor;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+        border-image-slice: 1;
+    }
+
+    &__selected-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 109px;
+
+        &:hover {
+            border: 1px solid;
+            border-image-source: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+            border-image-slice: 1;
+        }
+
+        &__name,
+        &__status {
+            width: 30%;
+            color: black;
+        }
+    }
+
+    &__items-active {
+        position: absolute;
+        z-index: 2;
+        top: 107px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 562px;
+        border: 1px solid;
+        border-image-source: linear-gradient(137.05deg, #e192dd 3.33%, #638de6 100%);
+        border-image-slice: 1;
+        background-color: white;
+
+        &__item:not(:nth-child(1)) {
+            cursor: not-allowed;
+
+            span {
+                color: #cbcbcb;
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 75px;
+            border-bottom: 1px solid $createProjectMainBorderColor;
+            color: black;
+
+            &__name,
+            &__status {
+                width: 30%;
+                color: black;
+            }
+
+            &__status {
+                background: $creteProjectLinearGradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &:hover {
+                background: $createProjectOnHoverLinearGradient;
+                border: none;
+            }
+        }
+    }
+
+    &__items {
+        display: none;
+    }
+}

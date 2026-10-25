@@ -1,0 +1,79 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contract": "CollectionNFT",
+  "address": "0x0b6904e9b2f1d0d7a456f070a67a86959a098bd4",
+  "deployTransaction": "0x965d3bd141e9a4fdc858ec05b12cf1aeaba2b962666bc9912fb5a6b1059f72c7",
+  "block": 11900073,
+  "gasUsed": 14562257,
+  "cost": "0.0000146 ETH",
+  "deployer": "0xa7aF8410b61CA79583F9995963fa947DA52cce4e",
+  "compiler": "solc 0.8.24, optimizer 200 runs",
+  "verified": [
+    "sourcify",
+    "blockscout"
+  ],
+  "explorer": "https://eth-sepolia.blockscout.com/address/0x0b6904e9b2f1d0d7a456f070a67a86959a098bd4",
+  "constructor": {
+    "baseURI": "ipfs://bafybeidsypevgmrwdf6zeamm6t3yktmwveiua76whgkexpkv3zrqey7vpa/",
+    "merkleRoot": "0xb879a5a27d1c73a450ad7b103ec17c669cac8be7a52f95a38ed3b8551bab1963",
+    "name": "Cosmic Critters",
+    "symbol": "NFT",
+    "maxSupply": 100,
+    "priceWei": "1000000000000000",
+    "maxPerMint": 5
+  },
+  "project": {
+    "id": "676db39c-e9f7-45a0-9e57-97f9bd0bf075",
+    "name": "Cosmic Critters",
+    "nftCount": 100,
+    "imagesCID": "bafybeied4hogzeb3vm7jxu7o2b57xpcbdlxbar674itlx3twep5d7gnivu",
+    "metadataCID": "bafybeidsypevgmrwdf6zeamm6t3yktmwveiua76whgkexpkv3zrqey7vpa"
+  },
+  "mintSite": "/sites/cosmic-critters",
+  "transactions": [
+    {
+      "method": "mintWhitelist",
+      "from": "0xa7aF8410b61CA79583F9995963fa947DA52cce4e",
+      "amount": 3,
+      "hash": "0xc67b8b0cae6f5e692404f6d9a4fc9bc2b1590f8cd2db1c4b8bd738ea7d76e62d",
+      "block": 11900080,
+      "gasUsed": 698471
+    },
+    {
+      "method": "setSaleState",
+      "args": "true",
+      "hash": "0xf97e26973b6f309bb14ec4058fc155a6cebb0115478fe2ca6b6d00ee3c12b1bd",
+      "block": 11900081,
+      "gasUsed": 29974
+    },
+    {
+      "method": "mint",
+      "from": "0xFf11E1F8721dadd907e8A9519B8111E20717c580",
+      "amount": 2,
+      "hash": "0x83390e48b01790c6d61d2b56a349ff66db78c5d3b173407277bda8ffb2a4730e",
+      "block": 11900085,
+      "gasUsed": 372948
+    },
+    {
+      "method": "setMerkleRoot",
+      "hash": "0x93c02d3f10b2e7270d5d009d34a8bf60a273bf25be79a744d9fb43245e929314",
+      "block": 11900092,
+      "gasUsed": 30106
+    },
+    {
+      "method": "mintWhitelist",
+      "from": "0xFf11E1F8721dadd907e8A9519B8111E20717c580",
+      "amount": 1,
+      "hash": "0xa59bff6aec3a7cb814db9fbd0449acaa32ec75b01d482f76fc57243a65db51f6",
+      "block": 11900098,
+      "gasUsed": 276762
+    },
+    {
+      "method": "withdraw",
+      "hash": "0x9c39149ed12fa0826a8d60a001135a2bdf2efeb861d4edd5ba8b1d7a6822d4e7",
+      "block": 11900099,
+      "gasUsed": 26637
+    }
+  ]
+}

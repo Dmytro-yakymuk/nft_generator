@@ -1,0 +1,251 @@
+layer,variant,weight,expected_share,observed_share,count
+Background,Sunset.png,140,0.11885,0.11330,1133
+Background,Aurora.png,120,0.10187,0.10660,1066
+Background,Deep Space.png,110,0.09338,0.09360,936
+Background,Mint Dream.png,130,0.11036,0.10680,1068
+Background,Peach Sky.png,130,0.11036,0.11490,1149
+Background,Ocean.png,120,0.10187,0.10380,1038
+Background,Lavender Haze.png,120,0.10187,0.10440,1044
+Background,Golden Hour.png,90,0.07640,0.07140,714
+Background,Cherry Blossom.png,90,0.07640,0.07730,773
+Background,Midnight.png,60,0.05093,0.05030,503
+Background,Bubblegum.png,60,0.05093,0.04910,491
+Background,Holographic.png,8,0.00679,0.00850,85
+Backdrop,Stars.png,90,0.08911,0.09130,913
+Backdrop,Polka Dots.png,90,0.08911,0.08480,848
+Backdrop,Sunburst.png,80,0.07921,0.07580,758
+Backdrop,Synthwave Grid.png,40,0.03960,0.03660,366
+Backdrop,Waves.png,80,0.07921,0.08010,801
+Backdrop,Hexagons.png,60,0.05941,0.06340,634
+Backdrop,Clouds.png,90,0.08911,0.08820,882
+Backdrop,Checkerboard.png,50,0.04950,0.04710,471
+Backdrop,Diagonal Stripes.png,70,0.06931,0.07380,738
+Backdrop,Bokeh.png,60,0.05941,0.06140,614
+Backdrop,None,300,0.29703,0.29750,2975
+Celestial,Full Moon.png,90,0.09000,0.08930,893
+Celestial,Crescent Moon.png,110,0.11000,0.11250,1125
+Celestial,Ringed Planet.png,70,0.07000,0.07330,733
+Celestial,Sun.png,80,0.08000,0.08130,813
+Celestial,Comet.png,60,0.06000,0.06150,615
+Celestial,Twin Moons.png,40,0.04000,0.03970,397
+Celestial,Earth.png,40,0.04000,0.03790,379
+Celestial,Black Hole.png,10,0.01000,0.00940,94
+Celestial,None,500,0.50000,0.49510,4951
+Aura,Pink Glow.png,80,0.08000,0.07830,783
+Aura,Cyan Glow.png,80,0.08000,0.07770,777
+Aura,Gold Glow.png,60,0.06000,0.06040,604
+Aura,Rainbow Ring.png,40,0.04000,0.03970,397
+Aura,Fire Aura.png,50,0.05000,0.05000,500
+Aura,Electric Aura.png,40,0.04000,0.03520,352
+Aura,Shadow Aura.png,50,0.05000,0.05410,541
+Aura,None,600,0.60000,0.60460,6046
+Wings,Angel.png,60,0.05970,0.06190,619
+Wings,Bat.png,50,0.04975,0.04770,477
+Wings,Butterfly.png,50,0.04975,0.05170,517
+Wings,Fairy.png,50,0.04975,0.05420,542
+Wings,Dragon.png,25,0.02488,0.02280,228
+Wings,Mecha.png,15,0.01493,0.01490,149
+Wings,Phoenix.png,5,0.00498,0.00340,34
+Wings,None,750,0.74627,0.74340,7434
+Skin,Peach.png,130,0.13713,0.14350,1435
+Skin,Mint.png,110,0.11603,0.11710,1171
+Skin,Lavender.png,110,0.11603,0.11210,1121
+Skin,Sky.png,110,0.11603,0.11440,1144
+Skin,Lemon.png,100,0.10549,0.10630,1063
+Skin,Coral.png,100,0.10549,0.10590,1059
+Skin,Snow.png,90,0.09494,0.09650,965
+Skin,Charcoal.png,70,0.07384,0.07050,705
+Skin,Alien.png,60,0.06329,0.06140,614
+Skin,Ghost.png,30,0.03165,0.03310,331
+Skin,Chrome.png,20,0.02110,0.01950,195
+Skin,Galaxy.png,10,0.01055,0.01040,104
+Skin,Gold.png,8,0.00844,0.00930,93
+Skin Pattern,Spots.png,60,0.08054,0.08090,809
+Skin Pattern,Tiger Stripes.png,50,0.06711,0.06530,653
+Skin Pattern,Sparkle Skin.png,40,0.05369,0.05280,528
+Skin Pattern,Patches.png,50,0.06711,0.06700,670
+Skin Pattern,Scales.png,30,0.04027,0.04150,415
+Skin Pattern,Tribal.png,30,0.04027,0.03600,360
+Skin Pattern,Constellation.png,20,0.02685,0.02870,287
+Skin Pattern,Cracks.png,15,0.02013,0.02330,233
+Skin Pattern,None,450,0.60403,0.60450,6045
+Clothing,Red Hoodie.png,90,0.11029,0.10870,1087
+Clothing,Navy Hoodie.png,80,0.09804,0.09370,937
+Clothing,Striped Tee.png,80,0.09804,0.09910,991
+Clothing,White Tee.png,90,0.11029,0.10680,1068
+Clothing,Tuxedo.png,40,0.04902,0.05030,503
+Clothing,Kimono.png,40,0.04902,0.05130,513
+Clothing,Space Suit.png,30,0.03676,0.04000,400
+Clothing,Knight Armor.png,20,0.02451,0.02540,254
+Clothing,Varsity Jacket.png,60,0.07353,0.07280,728
+Clothing,Leather Jacket.png,50,0.06127,0.06180,618
+Clothing,Overalls.png,50,0.06127,0.06410,641
+Clothing,Turtleneck.png,60,0.07353,0.07560,756
+Clothing,Gold Robe.png,6,0.00735,0.00760,76
+Clothing,None,120,0.14706,0.14280,1428
+Badge,Star Pin.png,60,0.06897,0.06620,662
+Badge,Heart Pin.png,60,0.06897,0.07380,738
+Badge,Lightning Pin.png,50,0.05747,0.05230,523
+Badge,Smiley Pin.png,50,0.05747,0.05820,582
+Badge,Planet Pin.png,30,0.03448,0.03770,377
+Badge,Flame Pin.png,30,0.03448,0.03290,329
+Badge,Diamond Pin.png,15,0.01724,0.01800,180
+Badge,GM Pin.png,30,0.03448,0.03360,336
+Badge,Peace Pin.png,25,0.02874,0.02700,270
+Badge,None,520,0.59770,0.60030,6003
+Necklace,Gold Chain.png,70,0.08485,0.08970,897
+Necklace,Pearls.png,60,0.07273,0.07590,759
+Necklace,Bow Tie.png,70,0.08485,0.08580,858
+Necklace,Red Scarf.png,50,0.06061,0.06100,610
+Necklace,Medal.png,30,0.03636,0.03700,370
+Necklace,Crystal Pendant.png,25,0.03030,0.02760,276
+Necklace,Spiked Collar.png,30,0.03636,0.03490,349
+Necklace,Bandana.png,40,0.04848,0.05080,508
+Necklace,None,450,0.54545,0.53730,5373
+Earrings,Gold Hoops.png,80,0.08421,0.08610,861
+Earrings,Diamond Studs.png,60,0.06316,0.05870,587
+Earrings,Pearl Drops.png,50,0.05263,0.05490,549
+Earrings,Silver Cross.png,30,0.03158,0.03150,315
+Earrings,Feathers.png,40,0.04211,0.04420,442
+Earrings,Moon & Star.png,25,0.02632,0.02840,284
+Earrings,Cherries.png,15,0.01579,0.01600,160
+Earrings,None,650,0.68421,0.68020,6802
+Cheeks,Pink Blush.png,100,0.12903,0.13260,1326
+Cheeks,Coral Blush.png,70,0.09032,0.08840,884
+Cheeks,Freckles.png,70,0.09032,0.08540,854
+Cheeks,Heart Cheeks.png,40,0.05161,0.04700,470
+Cheeks,Spirals.png,20,0.02581,0.02640,264
+Cheeks,Whiskers.png,50,0.06452,0.06750,675
+Cheeks,Star Cheeks.png,25,0.03226,0.03090,309
+Cheeks,None,400,0.51613,0.52180,5218
+Face Mark,Scar.png,40,0.04124,0.03860,386
+Face Mark,Star Tattoo.png,50,0.05155,0.04970,497
+Face Mark,Tear Drop.png,40,0.04124,0.04100,410
+Face Mark,Bandage.png,50,0.05155,0.05090,509
+Face Mark,War Paint.png,30,0.03093,0.03260,326
+Face Mark,Lightning.png,20,0.02062,0.01770,177
+Face Mark,Heart Tattoo.png,40,0.04124,0.04070,407
+Face Mark,None,700,0.72165,0.72880,7288
+Nose,Button.png,120,0.15094,0.14250,1425
+Nose,Cat Nose.png,80,0.10063,0.10050,1005
+Nose,Dot.png,100,0.12579,0.12860,1286
+Nose,Clown.png,15,0.01887,0.01920,192
+Nose,Pig Snout.png,30,0.03774,0.03810,381
+Nose,None,450,0.56604,0.57110,5711
+Mouth,Smile.png,140,0.18277,0.18760,1876
+Mouth,Big Grin.png,90,0.11749,0.12180,1218
+Mouth,Laugh.png,90,0.11749,0.11360,1136
+Mouth,Cat Mouth.png,80,0.10444,0.10650,1065
+Mouth,Surprised.png,60,0.07833,0.07660,766
+Mouth,Smirk.png,70,0.09138,0.08850,885
+Mouth,Fangs.png,40,0.05222,0.05190,519
+Mouth,Tongue Out.png,60,0.07833,0.07870,787
+Mouth,Flat.png,50,0.06527,0.06700,670
+Mouth,Frown.png,30,0.03916,0.03620,362
+Mouth,Buck Teeth.png,30,0.03916,0.03960,396
+Mouth,Zigzag.png,20,0.02611,0.02470,247
+Mouth,Gold Grill.png,6,0.00783,0.00730,73
+Mouth Item,Bubble Gum.png,40,0.03980,0.03860,386
+Mouth Item,Lollipop.png,35,0.03483,0.03480,348
+Mouth Item,Rose.png,25,0.02488,0.02480,248
+Mouth Item,Pacifier.png,25,0.02488,0.02310,231
+Mouth Item,Leaf.png,30,0.02985,0.02930,293
+Mouth Item,None,850,0.84577,0.84940,8494
+Eyes,Round.png,150,0.26786,0.26440,2644
+Eyes,Big.png,110,0.19643,0.18850,1885
+Eyes,Wide.png,100,0.17857,0.18170,1817
+Eyes,Almond.png,90,0.16071,0.16470,1647
+Eyes,Droopy.png,60,0.10714,0.10940,1094
+Eyes,Sharp.png,50,0.08929,0.09130,913
+Iris,Brown.png,140,0.18996,0.18220,1822
+Iris,Hazel.png,100,0.13569,0.13860,1386
+Iris,Blue.png,120,0.16282,0.16580,1658
+Iris,Green.png,100,0.13569,0.13850,1385
+Iris,Violet.png,70,0.09498,0.09410,941
+Iris,Amber.png,60,0.08141,0.08250,825
+Iris,Red.png,40,0.05427,0.05530,553
+Iris,Ice.png,40,0.05427,0.05730,573
+Iris,Heterochromia.png,20,0.02714,0.02550,255
+Iris,Cat Slit.png,25,0.03392,0.03070,307
+Iris,Galaxy.png,12,0.01628,0.01610,161
+Iris,Rainbow.png,6,0.00814,0.00820,82
+Iris,Laser.png,4,0.00543,0.00520,52
+Hair,Tuft.png,80,0.09780,0.09610,961
+Hair,Mohawk.png,50,0.06112,0.06340,634
+Hair,Curly.png,70,0.08557,0.08560,856
+Hair,Spiky.png,60,0.07335,0.07510,751
+Hair,Bowl Cut.png,60,0.07335,0.07030,703
+Hair,Side Swoop.png,60,0.07335,0.07930,793
+Hair,Space Buns.png,50,0.06112,0.06070,607
+Hair,Leaf Sprout.png,50,0.06112,0.06120,612
+Hair,Afro.png,30,0.03667,0.03680,368
+Hair,Flame Hair.png,8,0.00978,0.00930,93
+Hair,None,300,0.36675,0.36220,3622
+Brows,Neutral.png,120,0.17647,0.17120,1712
+Brows,Raised.png,80,0.11765,0.12050,1205
+Brows,Angry.png,70,0.10294,0.10010,1001
+Brows,Worried.png,60,0.08824,0.08780,878
+Brows,Thick.png,50,0.07353,0.07480,748
+Brows,Dots.png,40,0.05882,0.05830,583
+Brows,Unibrow.png,10,0.01471,0.01720,172
+Brows,None,250,0.36765,0.37010,3701
+Eyewear,Round Glasses.png,70,0.06829,0.06840,684
+Eyewear,Aviators.png,60,0.05854,0.06080,608
+Eyewear,Heart Shades.png,40,0.03902,0.04110,411
+Eyewear,Cyber Visor.png,30,0.02927,0.02920,292
+Eyewear,Monocle.png,25,0.02439,0.02350,235
+Eyewear,3D Glasses.png,30,0.02927,0.02730,273
+Eyewear,Star Shades.png,20,0.01951,0.01900,190
+Eyewear,Nerd Glasses.png,50,0.04878,0.04970,497
+Eyewear,None,700,0.68293,0.68100,6810
+Headgear,Crown.png,50,0.04237,0.04570,457
+Headgear,Beanie.png,70,0.05932,0.05850,585
+Headgear,Baseball Cap.png,70,0.05932,0.06220,622
+Headgear,Wizard Hat.png,30,0.02542,0.02400,240
+Headgear,Top Hat.png,40,0.03390,0.03460,346
+Headgear,Halo.png,30,0.02542,0.02640,264
+Headgear,Party Hat.png,50,0.04237,0.04080,408
+Headgear,Viking Helmet.png,25,0.02119,0.02240,224
+Headgear,Cat Ears.png,60,0.05085,0.04950,495
+Headgear,Bunny Ears.png,50,0.04237,0.04410,441
+Headgear,Devil Horns.png,40,0.03390,0.03400,340
+Headgear,Antennae.png,40,0.03390,0.03480,348
+Headgear,Flower Crown.png,40,0.03390,0.03240,324
+Headgear,Propeller Cap.png,25,0.02119,0.02020,202
+Headgear,Headphones.png,60,0.05085,0.05090,509
+Headgear,None,500,0.42373,0.41950,4195
+Pet,Ghost.png,60,0.05769,0.05980,598
+Pet,Bird.png,50,0.04808,0.04950,495
+Pet,Slime.png,50,0.04808,0.04660,466
+Pet,Robot Drone.png,30,0.02885,0.02530,253
+Pet,Kitten.png,40,0.03846,0.03970,397
+Pet,Jellyfish.png,30,0.02885,0.02730,273
+Pet,Mini Dragon.png,10,0.00962,0.01100,110
+Pet,UFO.png,20,0.01923,0.02010,201
+Pet,None,750,0.72115,0.72070,7207
+Particles,Sparkles.png,80,0.09195,0.09310,931
+Particles,Bubbles.png,70,0.08046,0.07710,771
+Particles,Hearts.png,60,0.06897,0.07000,700
+Particles,Snowflakes.png,50,0.05747,0.05300,530
+Particles,Fireflies.png,50,0.05747,0.05930,593
+Particles,Music Notes.png,40,0.04598,0.04290,429
+Particles,Coins.png,20,0.02299,0.02450,245
+Particles,Petals.png,50,0.05747,0.05580,558
+Particles,None,450,0.51724,0.52430,5243
+Lighting,Vignette.png,80,0.08511,0.08450,845
+Lighting,Light Leak.png,50,0.05319,0.05870,587
+Lighting,Lens Flare.png,40,0.04255,0.04780,478
+Lighting,Neon Rim.png,30,0.03191,0.02950,295
+Lighting,Spotlight.png,40,0.04255,0.03870,387
+Lighting,Sunbeams.png,40,0.04255,0.04460,446
+Lighting,Glitch.png,10,0.01064,0.00970,97
+Lighting,None,650,0.69149,0.68650,6865
+Frame,Gold Frame.png,40,0.04040,0.03810,381
+Frame,Silver Frame.png,40,0.04040,0.04170,417
+Frame,Neon Frame.png,30,0.03030,0.03230,323
+Frame,Polaroid.png,30,0.03030,0.03120,312
+Frame,Pixel Border.png,25,0.02525,0.02690,269
+Frame,Rounded Card.png,40,0.04040,0.04130,413
+Frame,Wood Frame.png,30,0.03030,0.03010,301
+Frame,Holo Frame.png,5,0.00505,0.00530,53
+Frame,None,750,0.75758,0.75310,7531

@@ -1,0 +1,9 @@
+tool,set,run,images,decode_per_variant_ms,variants,load_decode_ms,compose_ms,encode_ms,image_kib,encode_best_speed_ms,image_best_speed_kib
+platform-go1.17,E1,1,300,0.73,35,,1.56,26.26,41.9,6.06,56.6
+hashlips-node18,E1,1,300,,,2.35,0.37,18.01,44.4,,
+platform-go1.17,ART,1,300,1.37,229,,4.53,59.95,172.7,12.31,217.8
+hashlips-node18,ART,1,300,,,16.71,1.62,45.93,190.8,,
+platform-go1.17,E1,2,300,0.77,35,,1.55,26.21,41.9,6.04,56.6
+hashlips-node18,E1,2,300,,,2.39,0.37,17.95,44.4,,
+platform-go1.17,ART,2,300,1.36,229,,4.54,59.88,172.7,12.29,217.8
+hashlips-node18,ART,2,300,,,16.29,1.61,45.33,188.9,,

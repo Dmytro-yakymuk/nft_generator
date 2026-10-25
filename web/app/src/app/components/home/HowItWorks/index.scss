@@ -1,0 +1,123 @@
+@import "@/index.scss";
+
+.works {
+    padding-bottom: 200px;
+    font-family: "SulphurPoint", sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+
+    &__wrapper {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 5%;
+    }
+
+    &__title {
+        line-height: 138px;
+        font-size: 96px;
+        font-family: "Medio", sans-serif;
+        -webkit-text-stroke: 1px white;
+        color: black;
+    }
+
+    &__features {
+        margin: 150px auto 230px;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+
+            &__image {
+                height: 36px;
+                width: 36px;
+            }
+
+            &__label {
+                margin-top: 10px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__main {
+        margin: 5% 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        width: 100%;
+
+        &__item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 1px solid white;
+            height: 350px;
+            min-width: 0;
+
+            &__logo {
+                position: absolute;
+                z-index: 2;
+                height: 110px;
+                width: 110px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid white;
+                background: black;
+                left: 20px;
+                top: 20px;
+            }
+
+            &__divider {
+                left: 25px;
+                top: 25px;
+                position: absolute;
+                z-index: 1;
+                height: 110px;
+                width: 110px;
+                background: $howItWorksLinearGradient;
+            }
+
+            &__label {
+                margin-top: 130px;
+                width: 100%;
+                line-height: 28px;
+                font-size: 28px;
+                text-align: left;
+            }
+
+            &__description {
+                margin-top: 30px;
+                font-size: 16px;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+
+    &__try-it {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 312px;
+        height: 60px;
+        line-height: 24px;
+        font-size: 24px;
+        font-family: "SulphurPoint", sans-serif;
+        background: white;
+        color: black;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}

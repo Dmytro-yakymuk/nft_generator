@@ -1,0 +1,9 @@
+# E12: межа кількості зображень HashLips Art Engine на наборі E1 (C = 16 807, uniqueDnaTorrance = 10 000).
+# HashLips зупиняє генерацію з повідомленням src/main.js:421 "You need more layers or elements to grow your edition to 13000 artworks!"
+# і не записує зведений build/json/_metadata.json, тому run.js завершується помилкою. Останні два рядки - кількість файлів у build/images і build/json.
+2026-10-18 22:02 EEST
+$ AMOUNTS=13000 REPEATS=1 OUT=<тимчасовий файл> node experiments/hashlips/run.js E1
+ПОМИЛКА: ENOENT: no such file or directory, open 'data/hashlips-runs/E1/build/json/_metadata.json'
+exit=1
+12466
+12466

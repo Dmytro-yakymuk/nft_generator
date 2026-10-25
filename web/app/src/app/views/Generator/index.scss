@@ -1,0 +1,14 @@
+@import "@/index.scss";
+
+.generator {
+    width: 100%;
+    height: calc(90vh - 52px);
+    margin-top: 10vh;
+
+    &__wrapper {
+        display: flex;
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

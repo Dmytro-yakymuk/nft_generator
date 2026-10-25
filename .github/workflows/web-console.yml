@@ -1,0 +1,24 @@
+name: "Web"
+
+on:
+  push:
+    branches: [ master, platform-update ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        # webpack 5 цього проєкту збирається лише на Node 16 (див. deploy/Dockerfile)
+        node-version: '16'
+    - name: Install
+      run: npm ci --legacy-peer-deps
+      working-directory: ./web/app
+    - name: Build
+      run: npm run build
+      working-directory: ./web/app

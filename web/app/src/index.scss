@@ -1,0 +1,43 @@
+@import "@static/styles/extends";
+@import "@static/styles/reset";
+@import "@static/styles/variables";
+
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("@static/fonts/Roboto-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CircularStd";
+    src: url("@static/fonts/CircularStd-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Medio";
+    src: url("@static/fonts/Medio.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SulphurPoint";
+    src: url("@static/fonts/SulphurPoint.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("@static/fonts/SpaceGrotesk.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoMono";
+    src: url("@static/fonts/RobotoMono-Regular.ttf") format("truetype");
+    font-display: swap;
+}

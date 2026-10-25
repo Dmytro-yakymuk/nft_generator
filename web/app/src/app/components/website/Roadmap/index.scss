@@ -1,0 +1,259 @@
+@import "@/index.scss";
+
+.website {
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+
+    &__wrapper {
+        display: flex;
+        max-width: 1920px;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    &__roadmap-create {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 502px;
+        font-family: "SulphurPoint", sans-serif;
+        color: black;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #a3a3a3;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            height: 450px;
+        }
+
+        &__add-milestone {
+            position: absolute;
+            bottom: 20px;
+            width: 34%;
+            height: 60px;
+            margin: 43px 0 0;
+            background: #000;
+        }
+
+        &__buttons {
+            position: sticky;
+            bottom: 0;
+            background: white;
+        }
+
+        &__save,
+        &__new {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            width: 95%;
+            min-height: 60px;
+            padding: 0 27px;
+            font-size: 18px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        &__save {
+            justify-content: center;
+        }
+
+        &__new {
+            margin-top: 20px;
+            background-image: url("@static/images/collection-generator/plus.svg");
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__milestone:not(:nth-child(1)) {
+        margin-top: 20px;
+    }
+
+    &__milestone {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin-bottom: 30px;
+
+        &__title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        #btn-0 {
+            display: none;
+        }
+
+        &__delete {
+            display: flex;
+            align-items: center;
+            height: 58px;
+            width: 120px;
+            padding-left: 32px;
+            font-size: 18px;
+            line-height: 18px;
+            background: transparent;
+            background-image: url("@static/images/trash.svg");
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            border: none;
+            color: $websiteDeleteButtonColor;
+            text-decoration: none;
+            cursor: pointer;
+
+            .delete-btn-text {
+                margin-top: 3px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &__label,
+        &__date,
+        &__description {
+            display: flex;
+            align-items: center;
+            height: 56px;
+            margin-top: 10px;
+            padding-left: 18px;
+            font-size: 14px;
+            outline: none;
+
+            &-label {
+                margin-top: 20px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__custom-roadmap {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: 0 0 5% auto;
+        min-height: 500px;
+        height: 100%;
+        width: 55%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), rgba(218, 217, 217, 0.26);
+
+        &__wrapper {
+            flex-direction: column;
+            position: absolute;
+            overflow-y: scroll;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: 80%;
+            padding: 4% 5%;
+            background: $websiteMainBackgroundColor;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #a3a3a3;
+            }
+        }
+
+        &__list {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+            margin: 0 auto;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 6px;
+                background: linear-gradient(180deg, rgba(169, 169, 169, 0) 0%, #d2d2d2 100%);
+                top: 85px;
+                bottom: 52px;
+                left: 50%;
+                margin-left: -11px;
+            }
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 20px;
+            align-self: flex-start;
+            max-width: 200px;
+            text-align: right;
+            word-wrap: break-word;
+            width: 50%;
+            padding: 10px 40px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 16px;
+                height: 16px;
+                right: -20px;
+                top: 46px;
+                background-color: black;
+                border-radius: 50%;
+            }
+
+            &:nth-child(2n):after {
+                left: -16px;
+            }
+
+            &:nth-child(2n+1) {
+                left: -20px;
+            }
+
+            &:nth-child(2n) {
+                align-self: flex-end;
+                text-align: left;
+                left: 0;
+            }
+
+            &__date,
+            &__decsription {
+                margin-top: 5px;
+                font-size: 16px;
+            }
+
+            &__title {
+                margin-top: 5px;
+                font-size: 24px;
+            }
+        }
+    }
+}

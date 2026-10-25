@@ -1,0 +1,236 @@
+@import "@/index.scss";
+
+.generate-metadata {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: calc(90vh - 52px);
+    margin-top: 10vh;
+    padding: 24px 0;
+    box-sizing: border-box;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1920px;
+        width: 30%;
+        margin: 0 5%;
+        font-family: "SulphurPoint", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 40px;
+        color: #000;
+    }
+
+    &__project-name {
+        padding: 57px 0 14px 0;
+        font-size: 32px;
+        line-height: 32px;
+        color: #000;
+    }
+
+    &__size,
+    &__dimensions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        font-size: 18px;
+        line-height: 18px;
+        color: #000;
+    }
+
+    &__divider {
+        width: 100%;
+        height: 1px;
+        margin: 27px 0;
+        background: #000;
+    }
+
+    &__btn {
+        flex-shrink: 0;
+        width: 100%;
+        height: 60px;
+        cursor: pointer;
+
+        &-text {
+            font-family: "SulphurPoint", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .metadata {
+        margin-top: 57px;
+        background: #fff;
+        border: 1px solid #000;
+
+        span {
+            color: #000;
+        }
+    }
+
+    .generate-again,
+    .publish-to-ipfs {
+        border: none;
+        background: #000;
+
+        span {
+            color: #fff;
+        }
+    }
+
+    .publish-to-ipfs {
+        margin-top: 27px;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: wait;
+        }
+    }
+
+    .pin-ipfs {
+        margin-top: 4px;
+        background: #fff;
+        border: 1px solid #000;
+
+        span {
+            color: #000;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: wait;
+        }
+    }
+
+    &__pinned {
+        color: #1b7f3b;
+    }
+
+    &__ipfs {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 24px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        word-break: break-all;
+
+        .label {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        a {
+            color: #000;
+        }
+    }
+}
+
+.token-gallery {
+    margin-left: 4%;
+    font-family: "SulphurPoint", sans-serif;
+    color: #000;
+
+    &__title {
+        margin-bottom: 18px;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 170px);
+        gap: 12px 16px;
+    }
+
+    &__token {
+        min-width: 0;
+        margin: 0;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: block;
+            border-radius: 6px;
+        }
+
+        figcaption {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    &__name {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    &__trait {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #444;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .rarity {
+            flex-shrink: 0;
+        }
+    }
+}
+
+.contract-base-uri {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 12px 14px;
+    font-size: 15px;
+    line-height: 19px;
+    overflow-wrap: anywhere;
+
+    &--ipfs {
+        border-left: 4px solid #2e9d57;
+        background: rgba(46, 157, 87, 0.08);
+    }
+
+    &--outdated {
+        border-left: 4px solid #e08a00;
+        background: rgba(224, 138, 0, 0.08);
+    }
+
+    &__btn {
+        align-self: flex-start;
+        height: 40px;
+        padding: 0 18px;
+        font-family: "SulphurPoint", sans-serif;
+        font-size: 16px;
+        color: #fff;
+        background: #000;
+        border: none;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+}

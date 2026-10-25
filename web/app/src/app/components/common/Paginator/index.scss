@@ -1,0 +1,45 @@
+@import "@/index.scss";
+
+.paginator {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 5%;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 80%;
+        font-family: "SulphurPoint", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+    }
+
+    &__all-count,
+    &__sellect-page {
+        display: flex;
+        justify-content: space-around;
+
+        &__prev,
+        &__next,
+        &__prev-not-active,
+        &__next-not-active {
+            font-family: "SulphurPoint", sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            background: none;
+            outline: none;
+            border: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        &__prev-not-active,
+        &__next-not-active {
+            font-weight: normal;
+            color: gray;
+            cursor: not-allowed;
+        }
+    }
+}

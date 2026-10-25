@@ -1,0 +1,146 @@
+@import "@/index.scss";
+
+.dashboard__info {
+    display: flex;
+    flex-direction: column;
+    height: 422px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90.25deg, #e9e9e9 0%, #e8e8e8 100%);
+    background: linear-gradient(180deg, #fafafc 0%, #fff 100%);
+    font-family: "SulphurPoint", sans-serif;
+    font-style: normal;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 17px 35px;
+    }
+
+    &__name {
+        padding-left: 31px;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 45px 35px 0;
+
+        &__item {
+            display: flex;
+            padding-bottom: 35px;
+
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                margin-left: 33px;
+            }
+
+            &__value {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 24px;
+                text-transform: capitalize;
+                color: #000;
+            }
+
+            &__title {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                text-transform: capitalize;
+                color: #adadad;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $desktopBreakPoint + 300px) {
+
+    .dashboard__info {
+
+        &__wrapper {
+            padding: 15px;
+        }
+
+        &__logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__name {
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__list {
+            padding: 45px 25px 0;
+
+            &__item {
+
+                &__wrapper {
+                    margin-left: 35px;
+                }
+
+                &__value {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                &__title {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tabletBreakPoint) {
+
+    .dashboard__info {
+
+        &__wrapper {
+            padding: 10px;
+        }
+
+        &__logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__name {
+            padding-left: 10px;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &__list {
+            padding: 25px 10px 0;
+
+            &__item {
+
+                &__wrapper {
+                    margin-left: 15px;
+                }
+
+                &__value {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+
+                &__title {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
